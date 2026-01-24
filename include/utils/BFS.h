@@ -2,15 +2,8 @@
 #define BFS_H
 
 #include "../data/Map.h"
-#include <vector>
-#include <queue>
-#include <utility>
+#include "../utils/Queue.h"
 
-class BFS {
-public:
-    BFS();
-    ~BFS();
-private:
-};
+int* BFS(MAP::Tile* grid, int startX, int startY, int endX, int endY);
 
 #endif // BFS_H
