@@ -4,6 +4,7 @@ namespace MAP
 {
   struct Tile
   {
+    int PlayerId=-1;
     char symbol;
     int x, y;
     Tile(int ax=0, int ay=0, char sym='.') : x(ax), y(ay), symbol(sym) {}

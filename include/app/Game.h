@@ -5,11 +5,15 @@
 #include "../data/Unit.h"
 
 class Game {
+    int width;
+    int height;
+    MAP::GRID* map;
+    UnitFactory* units;
 public:
-    Game();
+    Game(int a,int b);
     ~Game();
     
-    void initialize();
+    void initialize(int players);
     void run();
     void shutdown();
     
