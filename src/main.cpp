@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
     Game game(10,10);
-    game.initialize(2);
+    game.initialize(16);
     game.run();
     game.shutdown();
     return 0;

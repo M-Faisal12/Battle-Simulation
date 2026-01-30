@@ -11,10 +11,24 @@ Game::~Game() {
     delete units;
 }
 
-void Game::initialize(int players) {
+void Game::initialize(int inf) {
     // Initialize game state with the specified number of players
-    map->getTiles()[0].symbol = 'P';
-    map->getTiles()[0].PlayerId=units->RegisterUnit(0, 0, Weapon::WeaponType::SWORD, Armor::ArmorType::LIGHT, Shield::ShieldType::WOODEN);
+    int xi=0;        //Starting x position for infantry
+    int xa=width/2; //Starting x position for archers
+    int yi=(inf/(width/2));
+    if(yi<0) yi=0;
+    for(int i=0;i<inf;i++)
+    {
+        int a=units->RegisterUnit(xi, yi, Weapon::WeaponType::SWORD, Armor::ArmorType::LIGHT, Shield::ShieldType::WOODEN);
+        map->getTiles()[xi*width+yi].symbol='I';
+        map->getTiles()[xi*width+yi].PlayerId=a;
+        xi++;
+        if(xi>=width/2)
+        {
+            xi=0;
+            yi--;
+        }
+    }
 }
 
 void Game::run() {
