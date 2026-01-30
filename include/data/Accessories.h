@@ -7,7 +7,6 @@ namespace Weapon
     {
         SWORD,
         BOW,
-        STAFF,
         SPEAR,
         AXE
     };
@@ -15,7 +14,7 @@ namespace Weapon
     class Weapon
     {
     public:
-        Weapon(WeaponType type = WeaponType::STAFF)
+        Weapon(WeaponType type = WeaponType::AXE)
         {
             this->type = type;
             switch (type)
@@ -27,10 +26,6 @@ namespace Weapon
             case WeaponType::BOW:
                 attackPower = 10;
                 range = 5;
-                break;
-            case WeaponType::STAFF:
-                attackPower = 5;
-                range = 3;
                 break;
             case WeaponType::SPEAR:
                 attackPower = 12;
@@ -60,14 +55,14 @@ namespace Shield
     {
         NONE,
         WOODEN,
-        IRON,
-        STEEL
+        IRON
     };
     class Shield
     {
         ShieldType type;
         int defenseValue;
         int durability;
+        int weight;
 
     public:
         Shield(ShieldType type = ShieldType::NONE) : type(type)
@@ -77,24 +72,24 @@ namespace Shield
             case ShieldType::NONE:
                 defenseValue = 0;
                 durability = 0;
+                weight = 0;
                 break;
             case ShieldType::WOODEN:
                 defenseValue = 5;
                 durability = 100;
+                weight = 5;
                 break;
             case ShieldType::IRON:
                 defenseValue = 10;
                 durability = 80;
-                break;
-            case ShieldType::STEEL:
-                defenseValue = 15;
-                durability = 60;
+                weight = 10;
                 break;
             }
         }
         ShieldType getType() const { return type; }
         int getDefenseValue() const { return defenseValue; }
         int getDurability() const { return durability; }
+        int getWeight() const { return weight; }
     };
 };
 
@@ -103,7 +98,6 @@ namespace Armor
     enum class ArmorType
     {
         LIGHT,
-        MEDIUM,
         HEAVY
     };
     class Armor
@@ -123,14 +117,9 @@ namespace Armor
                 weight = 5;
                 durability = 100;
                 break;
-            case ArmorType::MEDIUM:
-                defenseValue = 10;
-                weight = 15;
-                durability = 80;
-                break;
             case ArmorType::HEAVY:
                 defenseValue = 15;
-                weight = 25;
+                weight = 15;
                 durability = 60;
                 break;
             }

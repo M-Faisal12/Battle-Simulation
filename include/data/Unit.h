@@ -13,7 +13,7 @@ struct Unit
     Weapon::Weapon *weapon;
     Armor::Armor *armor;
     Shield::Shield *shield;
-    Unit(int a, int x, int y, Weapon::WeaponType wtype = Weapon::WeaponType::STAFF,
+    Unit(int a, int x, int y, Weapon::WeaponType wtype = Weapon::WeaponType::AXE,
          Armor::ArmorType atype = Armor::ArmorType::LIGHT,
          Shield::ShieldType stype = Shield::ShieldType::WOODEN);
 };

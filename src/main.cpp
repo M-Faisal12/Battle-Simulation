@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 #include "../include/app/Game.h"
 #include "../include/utils/Queue.h"
@@ -10,7 +9,7 @@ using namespace std;
 int main()
 {
     Game game(10,10);
-    game.initialize(16);
+    game.initialize(20,20);
     game.run();
     game.shutdown();
     return 0;

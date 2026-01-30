@@ -13,7 +13,7 @@ public:
     Game(int a,int b);
     ~Game();
     
-    void initialize(int inf);
+    void initialize(int inf=0,int arc=0);
     void run();
     void shutdown();
     
