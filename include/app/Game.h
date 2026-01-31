@@ -3,12 +3,14 @@
 
 #include "../data/Map.h"
 #include "../data/Unit.h"
+#include "../simulation/OrderSystem.h"
 
 class Game {
     int width;
     int height;
     MAP::GRID* map;
     UnitFactory* units;
+    OrderSystem* orderSystem;
 public:
     Game(int a,int b);
     ~Game();

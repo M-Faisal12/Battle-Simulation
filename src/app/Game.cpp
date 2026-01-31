@@ -4,11 +4,13 @@ Game::Game(int a,int b) : width(a), height(b) {
     map = new MAP::GRID(width, height);
     map->BuildMAP();
     units = new UnitFactory();
+    orderSystem = new OrderSystem();
 }
 
 Game::~Game() {
     delete map;
     delete units;
+    delete orderSystem;
 }
 
 void Game::initialize(int inf,int arc) {
@@ -57,4 +59,11 @@ void Game::run() {
 }
 
 void Game::shutdown() {
+    Order order;
+    order.type=OrderType::MOVE;
+    order.unitID=1;
+    order.targetX=5;
+    order.targetY=5;
+   orderSystem->issueOrder(order);
+   orderSystem->processOrders(units, map);
 }

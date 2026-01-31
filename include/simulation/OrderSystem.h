@@ -1,13 +1,16 @@
 #ifndef ORDER_SYSTEM_H
 #define ORDER_SYSTEM_H
 
-#include <queue>
+#include "../utils/Queue.h"
+#include "../data/Unit.h"
+#include "../data/Map.h"
+#include "MovementSystem.h"
+#include "CombatSystem.h"
 
 enum class OrderType {
     MOVE,
     ATTACK,
     DEFEND,
-    RETREAT,
     HOLD
 };
 
@@ -19,17 +22,18 @@ struct Order {
 };
 
 class OrderSystem {
+    MovementSystem movementSystem;
 public:
     OrderSystem();
     ~OrderSystem();
     
     void issueOrder(const Order& order);
-    void processOrders();
+    void processOrders(UnitFactory* units, MAP::GRID* map);
     Order getNextOrder();
     bool hasOrders() const;
     
 private:
-    std::queue<Order> orderQueue;
+    Queue<Order>* orderQueue;
 };
 
 #endif // ORDER_SYSTEM_H

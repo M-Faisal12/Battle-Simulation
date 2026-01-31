@@ -25,7 +25,7 @@ namespace Weapon
                 break;
             case WeaponType::BOW:
                 attackPower = 10;
-                range = 5;
+                range = 10;
                 break;
             case WeaponType::SPEAR:
                 attackPower = 12;
