@@ -31,6 +31,7 @@ public:
     void processOrders(UnitFactory* units, MAP::GRID* map);
     Order getNextOrder();
     bool hasOrders() const;
+    void Simulate(MAP::GRID* map);
     
 private:
     Queue<Order>* orderQueue;

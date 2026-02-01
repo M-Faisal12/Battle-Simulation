@@ -4,13 +4,13 @@ Game::Game(int a,int b) : width(a), height(b) {
     map = new MAP::GRID(width, height);
     map->BuildMAP();
     units = new UnitFactory();
-    orderSystem = new OrderSystem();
+    simulation = new Simulation();
 }
 
 Game::~Game() {
     delete map;
     delete units;
-    delete orderSystem;
+    delete simulation;
 }
 
 void Game::initialize(int inf,int arc) {
@@ -61,9 +61,30 @@ void Game::run() {
 void Game::shutdown() {
     Order order;
     order.type=OrderType::MOVE;
-    order.unitID=1;
-    order.targetX=5;
-    order.targetY=5;
-   orderSystem->issueOrder(order);
-   orderSystem->processOrders(units, map);
+    int a,b;
+    while(true)
+    {
+    std::cout<<"Enter target coordinates X Y for Unit ";
+    std::cin>>a>>b;
+    if(map->getTiles()[b*map->getWidth()+a].PlayerId!=-1)break;
+    }
+    order.unitID=map->getTiles()[b*map->getWidth()+a].PlayerId;
+    std::cout<<"Enter target coordinates X Y to move to: ";
+    std::cin>>order.targetX>>order.targetY;
+   simulation->getOrderSystem()->issueOrder(order);
+   simulation->getOrderSystem()->processOrders(units, map);
+   std::cout<<std::endl;
+   simulation->processRound(map);
+   run();
+   std::cout<<std::endl;
+   simulation->processRound(map);
+   run();
+   std::cout<<std::endl;
+   simulation->processRound(map);
+   run();
+   std::cout<<std::endl;
+   simulation->processRound(map);
+   run();
+   simulation->processRound(map);
+
 }

@@ -13,6 +13,7 @@ int* BFS(MAP::Tile* grid, int startX, int startY, int endX, int endY)
     for (int i = 0; i < 100; i++)
         parent[i] = -1;
     Queue<int> q;
+    //!Alert hardcoded for 10x10 grid
     q.enqueue(startX + startY*10);
     visited[startX + startY*10] = true;
     while(!q.isEmpty())
