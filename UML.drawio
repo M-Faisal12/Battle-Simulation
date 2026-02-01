@@ -45,7 +45,7 @@
         <mxCell id="4eUzz-lqmCVJoSn9MlPF-12" parent="4eUzz-lqmCVJoSn9MlPF-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ symbol : char" vertex="1">
           <mxGeometry height="28" width="140" y="52" as="geometry" />
         </mxCell>
-        <mxCell id="4eUzz-lqmCVJoSn9MlPF-13" parent="4eUzz-lqmCVJoSn9MlPF-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ x : int&lt;div&gt;+ y : int&lt;/div&gt;" vertex="1">
+        <mxCell id="4eUzz-lqmCVJoSn9MlPF-13" parent="4eUzz-lqmCVJoSn9MlPF-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=light-dark(#000000,#FFFFFF);" value="+ x : int&lt;div&gt;+ y : int&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="140" y="80" as="geometry" />
         </mxCell>
         <mxCell id="4eUzz-lqmCVJoSn9MlPF-14" edge="1" parent="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0.12;entryY=0.059;entryDx=0;entryDy=0;entryPerimeter=0;" target="4eUzz-lqmCVJoSn9MlPF-10" value="Width*Height">
