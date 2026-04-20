@@ -62,6 +62,8 @@ Created a single-page application with:
 - Chart.js integration for multiple visualization types
 - Bootstrap components for consistent UI
 
+### Database design 
+### 📄 [ERD](Doc1.pdf)
 ## 📈 Learning Outcomes
 
 Through this project, I gained hands-on experience with:
@@ -157,5 +159,4 @@ This project represents my individual learning journey, but I'm always open to f
 
 ---
 
-**Built with passion for data and beautiful user experiences** ✨</content>
-<parameter name="filePath">c:\Users\surface\Downloads\Assignment2\README.md
+**Built with passion for data and beautiful user experiences** ✨
