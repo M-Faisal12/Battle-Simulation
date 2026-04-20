@@ -63,7 +63,10 @@ Created a single-page application with:
 - Bootstrap components for consistent UI
 
 ### Database design 
-### 📄 [ERD](ERD.png)
+
+<p align="center">
+  <img src="ERD.PNG" width="600">
+</p>
 ## 📈 Learning Outcomes
 
 Through this project, I gained hands-on experience with:
